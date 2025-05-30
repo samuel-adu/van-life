@@ -1,0 +1,38 @@
+/* ABOUT PAGE */
+
+.about__page {
+  width: 100%;
+}
+
+.about__hero-image {
+  object-fit: cover;
+  width: 100%;
+}
+
+.about__page .heading {
+  margin-bottom: 2rem;
+}
+
+.about__page-body {
+  padding-block: 2.5rem;
+}
+
+.about__page-content {
+  color: #161616;
+  margin-bottom: 2.5rem;
+}
+
+.about__page-content p {
+  margin-bottom: 1rem;
+}
+
+.about__page-cta {
+  background-color: #ffcc8d;
+  color: #161616;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.about__page-cta .sub-heading {
+  margin-bottom: 1rem;
+}

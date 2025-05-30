@@ -1,0 +1,53 @@
+/* VAN LIST PAGE */
+.van-list__page {
+  padding-block: 4.5rem;
+}
+
+.van-list__page .heading {
+  margin-bottom: 1.5rem;
+}
+
+.van-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.van-image {
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.van-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 31px;
+}
+
+.van-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 31px;
+}
+
+.van-price span {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.van-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+@media (min-width: 40rem) {
+  .van-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 80rem) {
+  .van-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

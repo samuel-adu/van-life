@@ -1,0 +1,101 @@
+@import 'tailwindcss';
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+  --orange-100: #fff7ed;
+  --orange-200: #ffead0;
+  --orange-400: #ffddb2;
+  --orange-500: #ff8c38;
+
+  --gray-900: #161616;
+  --gray-700: #252525;
+  --gray-300: #4d4d4d;
+  --gray-100: #aaaaaa;
+
+  --text-primary: var(--gray-300);
+  --text-secondary: var(--gray-900);
+
+  --bg-primary: var(--orange-100);
+  --bg-secondary: var(--white);
+
+  --fw-thin: 300;
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --text-5xl: 3rem;
+  --text-4xl: 2.25rem;
+  --text-3xl: 1.875rem;
+  --text-2xl: 1.5rem;
+  --text-xl: 1.25rem;
+  --text-lg: 1.125rem;
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+
+  --spacing-50: 0.25rem;
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-700: 3.5rem;
+  --spacing-900: 4.5rem;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* TYPOGRAPHY */
+.main-heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0;
+}
+
+.logo {
+  width: 120px;
+}
+
+@media (min-width: 80rem) {
+  .main-heading {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+}
