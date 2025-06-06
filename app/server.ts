@@ -37,7 +37,7 @@ export function makeServer({ environment = 'development' } = {}) {
         imageUrl:
           'https://assets.scrimba.com/advanced-react/react-router/beach-bum.png',
         type: 'rugged',
-        hostId: '123',
+        hostId: '456',
       });
       server.create('van', {
         id: '3',
@@ -48,7 +48,7 @@ export function makeServer({ environment = 'development' } = {}) {
         imageUrl:
           'https://assets.scrimba.com/advanced-react/react-router/reliable-red.png',
         type: 'luxury',
-        hostId: '456',
+        hostId: '123',
       });
       server.create('van', {
         id: '4',
@@ -59,7 +59,7 @@ export function makeServer({ environment = 'development' } = {}) {
         imageUrl:
           'https://assets.scrimba.com/advanced-react/react-router/dreamfinder.png',
         type: 'simple',
-        hostId: '789',
+        hostId: '456',
       });
       server.create('van', {
         id: '5',

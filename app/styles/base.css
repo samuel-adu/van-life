@@ -6,13 +6,19 @@
 
   --orange-100: #fff7ed;
   --orange-200: #ffead0;
-  --orange-400: #ffddb2;
+  --orange-300: #ffddb2;
+  --orange-400: #ffcc8d;
   --orange-500: #ff8c38;
+  --orange-700: #e17654;
 
   --gray-900: #161616;
   --gray-700: #252525;
   --gray-300: #4d4d4d;
   --gray-100: #aaaaaa;
+
+  --clr-simple: #e17654;
+  --clr-luxury: var(--gray-900);
+  --clr-rugged: #115e59;
 
   --text-primary: var(--gray-300);
   --text-secondary: var(--gray-900);

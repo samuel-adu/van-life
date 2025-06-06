@@ -1,14 +1,14 @@
-.host-vans .heading {
+.host-vans__heading {
   margin-bottom: 2.5rem;
+  color: var(--text-secondary);
 }
 
-.host-vans-list {
-  display: flex;
-  flex-direction: column;
+.host-vans__list {
+  display: grid;
   gap: 1rem;
 }
 
-.host-van-card {
+.host-vans__card {
   display: flex;
   align-items: center;
   padding: 1.125rem 1.5rem;
@@ -17,19 +17,55 @@
   border-radius: 6px;
 }
 
-.host-van-card__image {
+.host-vans__card-image {
   width: 70px;
   height: 70px;
   border-radius: 4px;
 }
 
-.host-van-card__title {
-  font-size: 1.25rem;
+.host-vans__card-title {
+  font-size: var(--text-xl);
   font-weight: var(--fw-semi-bold);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
-.host-van-card__text {
-  color: var(--text-secondary);
-  font-size: 1rem;
+.host-vans__card-text {
+  color: var(--text-primary);
+  font-size: var(--text-base);
+}
+
+@media (min-width: 40rem) {
+  .host-vans__card-image {
+    width: 30%;
+    height: 100%;
+  }
+
+  .host-vans__card-info {
+    flex: 1;
+  }
+
+  .host-vans__card-title {
+    font-size: var(--text-2xl);
+  }
+
+  .host-vans__card-text {
+    font-size: var(--text-base);
+  }
+}
+
+@media (min-width: 80rem) {
+  .host-vans__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-300);
+  }
+
+  .host-vans__card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .host-vans__card-image {
+    width: 100%;
+    height: 100%;
+  }
 }

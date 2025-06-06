@@ -18,6 +18,10 @@ if (import.meta.env.DEV) {
   makeServer({ environment: 'development' });
 }
 
+// if (process.env.NODE_ENV === 'development') {
+//   makeServer({ environment: 'development' });
+// }
+
 export const links: Route.LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {

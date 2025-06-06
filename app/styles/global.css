@@ -1,7 +1,7 @@
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--spacing-100);
 }
 
 .nav__link {
@@ -12,6 +12,10 @@
   font-size: var(--text-base);
 }
 
+.main-nav .nav__list-item:last-child .nav__link {
+  padding-right: 0;
+}
+
 .nav__link:hover {
   color: var(--text-secondary);
   font-weight: var(--fw-bold);
@@ -20,6 +24,7 @@
 .nav__link--active {
   color: var(--text-secondary);
   text-decoration: underline;
+  text-underline-offset: 0.25rem;
   font-weight: var(--fw-bold);
 }
 
@@ -29,31 +34,25 @@
   text-decoration: none;
   border: none;
   transition: transform 0.1s ease-in-out;
-  padding: 0.75rem 1.5rem;
-  font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .btn--primary {
-  background-color: #ff8c38;
-  color: white;
-}
-
-.btn--primary:hover {
-  transform: translate(1px, 1px);
-}
-
-.btn--full-width {
-  width: 100%;
+  font-weight: var(--fw-bold);
+  padding: 0.75rem 1.5rem;
 }
 
 .btn--secondary {
-  background-color: #161616;
-  color: white;
+  color: var(--text-primary);
+  padding-block: var(--spacing-100);
+  font-weight: var(--fw-semi-bold);
 }
 
-.back-btn {
+.btn--secondary:hover {
+  text-decoration: underline;
+  text-underline-offset: var(--spacing-50);
+  text-decoration-thickness: 2px;
 }
 
 .van-type {
@@ -93,4 +92,10 @@
 .van-type.luxury:hover,
 .van-type.luxury.selected {
   background-color: #161616;
+}
+
+@media (min-width: 40rem) {
+  .nav__list {
+    gap: var(--spacing-300);
+  }
 }

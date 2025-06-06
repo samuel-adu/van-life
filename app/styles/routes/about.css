@@ -27,10 +27,19 @@
 }
 
 .about__page-cta {
-  background-color: #ffcc8d;
-  color: #161616;
+  background-color: var(--orange-400);
+  color: var(--text-secondary);
   padding: 1.5rem;
   border-radius: 6px;
+}
+
+.about__btn {
+  background-color: var(--gray-900);
+  color: var(--white);
+}
+
+.about__btn:hover {
+  background-color: var(--gray-700);
 }
 
 .about__page-cta .sub-heading {

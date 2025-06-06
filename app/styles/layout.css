@@ -10,20 +10,20 @@ main {
   flex-direction: column;
 }
 
-.home {
-  flex: 1;
-}
-
 .container {
   padding-inline: 1.5rem;
   width: 100%;
+}
+
+section {
+  padding-block: var(--spacing-500);
 }
 
 @media (min-width: 40rem) {
   .container {
     padding-inline: 2.5rem;
     margin-inline: auto;
-    max-width: 768px;
+    /* max-width: 768px; */
   }
 }
 

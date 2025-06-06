@@ -1,3 +1,7 @@
 .host-nav {
-  margin-block: 2rem;
+  margin-block: var(--spacing-300);
+}
+
+.host-nav .nav__list {
+  gap: var(--spacing-200);
 }

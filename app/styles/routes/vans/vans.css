@@ -38,11 +38,63 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
+  margin-bottom: var(--spacing-100);
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-200);
+  align-items: center;
+  margin-bottom: var(--spacing-500);
+}
+
+.filter__btn {
+  background-color: var(--orange-200);
+  font-weight: var(--fw-regular);
+}
+
+.clear-filter-btn {
+  margin-left: var(--spacing-200);
+}
+
+.filter__simple:hover {
+  background-color: var(--clr-simple);
+  color: var(--orange-200);
+}
+
+.filter__simple.filter__btn--selected {
+  background-color: var(--clr-simple);
+  color: var(--orange-200);
+}
+
+.filter__luxury:hover {
+  background-color: var(--clr-luxury);
+  color: var(--orange-200);
+}
+
+.filter__luxury.filter__btn--selected {
+  background-color: var(--clr-luxury);
+  color: var(--orange-200);
+}
+
+.filter__rugged:hover {
+  background-color: var(--clr-rugged);
+  color: var(--orange-200);
+}
+
+.filter__rugged.filter__btn--selected {
+  background-color: var(--clr-rugged);
+  color: var(--orange-200);
 }
 
 @media (min-width: 40rem) {
   .van-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter {
+    gap: var(--spacing-300);
   }
 }
 

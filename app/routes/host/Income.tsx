@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Income() {
   return (
-    <main>
-      <div className="container">Income Goes Here</div>
-    </main>
+    <section>
+      <h2 className="heading">Income</h2>
+    </section>
   );
 }

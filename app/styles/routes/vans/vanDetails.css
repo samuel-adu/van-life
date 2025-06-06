@@ -6,6 +6,7 @@
 .van-detail {
   display: grid;
   gap: 1.5rem;
+  margin-top: var(--spacing-500);
 }
 
 .van-detail img {
@@ -33,6 +34,16 @@
 .van-detail-page .van-type {
   display: inline-block;
   margin-bottom: 1rem;
+}
+
+.van-detail__btn {
+  background-color: var(--orange-500);
+  color: var(--white);
+  width: 100%;
+}
+
+.van-detail__btn:hover {
+  background-color: var(--orange-700);
 }
 
 @media (min-width: 80rem) {

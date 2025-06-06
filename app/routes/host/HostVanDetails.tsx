@@ -28,9 +28,9 @@ export default function HostVanDetails() {
   }, [params.id]);
 
   return (
-    <div className="container host-van-details-page">
-      <Link to=".." className="back-btn" relative="path">
-        &larr; back to all vans
+    <section className="host-van-details">
+      <Link to=".." className="btn btn--secondary" relative="path">
+        &larr; Back to all vans
       </Link>
 
       <div className="host-van-details__content">
@@ -38,9 +38,9 @@ export default function HostVanDetails() {
           <img
             src={van?.imageUrl}
             alt={van?.name}
-            className="host-van-details__image"
+            className="host-van-details__hero-image"
           />
-          <div className="host-van__summary">
+          <div className="host-van-details__info">
             <VanTypeLabel type={van?.type} />
             <h2 className="host-van-details__heading ">{van?.name}</h2>
             <p className="host-van-details__sub-heading">
@@ -87,7 +87,7 @@ export default function HostVanDetails() {
           <Outlet context={{ van } satisfies ContextType} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

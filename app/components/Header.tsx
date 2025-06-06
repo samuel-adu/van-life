@@ -9,7 +9,7 @@ export default function Header() {
         <img src={logo} alt="logo" />
       </Link>
 
-      <nav className="nav">
+      <nav className="nav main-nav">
         <ul className="nav__list">
           <li className="nav__list-item">
             <NavLink

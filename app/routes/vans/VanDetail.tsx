@@ -1,9 +1,10 @@
 import React from 'react';
-import { useParams } from 'react-router';
+import { Link, useLocation, useParams } from 'react-router';
 import '../../styles/routes/vans/vanDetails.css';
 
 export default function VanDetail() {
   const params = useParams();
+  const location = useLocation();
 
   interface van {
     imageUrl: string;
@@ -24,6 +25,14 @@ export default function VanDetail() {
   return (
     <main className="van-detail-page">
       <div className="container">
+        <Link
+          to={`..?${location.state?.search || ''}`}
+          className="btn btn--secondary"
+          relative="path"
+        >
+          &larr; Back to {location.state?.type || 'all'} vans
+        </Link>
+
         {van ? (
           <div className="van-detail">
             <div className="van-">
@@ -37,7 +46,7 @@ export default function VanDetail() {
                 <span>/day</span>
               </p>
               <p>{van.description}</p>
-              <button className="btn btn--primary btn--full-width">
+              <button className="btn btn--primary van-detail__btn">
                 Rent this van
               </button>
             </div>

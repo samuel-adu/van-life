@@ -21,34 +21,28 @@ export default function HostVans() {
 
   return (
     <section className="host-vans">
-      <div className="container">
-        <h2 className="heading">Your listed vans</h2>
+      <h2 className="host-vans__heading heading">Your listed vans</h2>
 
-        <div className="host-vans-list">
-          {vans.length > 0 ? (
-            vans.map((van) => (
-              <Link
-                to={`/host/vans/${van.id}`}
-                key={van.id}
-                className="host-van-link-wrapper"
-              >
-                <div className="host-van-card" key={van.id}>
-                  <img
-                    src={van.imageUrl}
-                    alt={`Photo of ${van.name}`}
-                    className="host-van-card__image"
-                  />
-                  <div className="host-van-card__info">
-                    <p className="host-van-card__title">{van.name}</p>
-                    <p className="host-van-card__text">${van.price}/day</p>
-                  </div>
+      <div className="host-vans__list">
+        {vans.length > 0 ? (
+          vans.map((van) => (
+            <Link to={van.id} key={van.id} className="host-van__link-wrapper">
+              <div className="host-vans__card" key={van.id}>
+                <img
+                  src={van.imageUrl}
+                  alt={`Photo of ${van.name}`}
+                  className="host-vans__card-image"
+                />
+                <div className="host-vans__card-info">
+                  <p className="host-vans__card-title">{van.name}</p>
+                  <p className="host-vans__card-text">${van.price}/day</p>
                 </div>
-              </Link>
-            ))
-          ) : (
-            <h2 className="sub-heading">Loading vans...</h2>
-          )}
-        </div>
+              </div>
+            </Link>
+          ))
+        ) : (
+          <h2 className="sub-heading">Loading vans...</h2>
+        )}
       </div>
     </section>
   );

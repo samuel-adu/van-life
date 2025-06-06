@@ -6,23 +6,23 @@ export default function HostVanInfo() {
   if (!van) return <p>Loading...</p>;
 
   return (
-    <div>
-      <p>
-        <span className="host-van-details__attribute">Name:</span>
+    <>
+      <p className="host-van__attribute">
+        <span>Name:</span>
         {van.name}
       </p>
-      <p>
-        <span className="host-van-details__attribute">Category:</span>
+      <p className="host-van__attribute">
+        <span>Category:</span>
         {van.type}
       </p>
-      <p>
-        <span className="host-van-details__attribute">Description:</span>
+      <p className="host-van__attribute">
+        <span>Description:</span>
         {van.description}
       </p>
-      <p>
-        <span className="host-van-details__attribute">Visibility:</span>
+      <p className="host-van__attribute">
+        <span>Visibility:</span>
         Public
       </p>
-    </div>
+    </>
   );
 }
