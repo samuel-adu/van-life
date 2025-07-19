@@ -1,7 +1,6 @@
 .nav__list {
   display: flex;
   align-items: center;
-  gap: var(--spacing-100);
 }
 
 .nav__link {
@@ -26,6 +25,15 @@
   text-decoration: underline;
   text-underline-offset: 0.25rem;
   font-weight: var(--fw-bold);
+}
+
+.nav__list-item:last-of-type {
+  margin-left: var(--spacing-50);
+}
+
+.login-link {
+  font-size: var(--text-2xl);
+  color: var(--text-secondary);
 }
 
 .btn {

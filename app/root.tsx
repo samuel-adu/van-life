@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useRouteError,
 } from 'react-router';
 
 import type { Route } from './+types/root';
@@ -17,10 +18,6 @@ import { makeServer } from './server';
 if (import.meta.env.DEV) {
   makeServer({ environment: 'development' });
 }
-
-// if (process.env.NODE_ENV === 'development') {
-//   makeServer({ environment: 'development' });
-// }
 
 export const links: Route.LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -83,5 +80,13 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
         </pre>
       )}
     </main>
+  );
+}
+
+export function HydrateFallback() {
+  return (
+    <div className="container flex items-center h-svh justify-center">
+      <p>Loading...</p>
+    </div>
   );
 }

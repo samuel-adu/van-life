@@ -1,4 +1,4 @@
-import { createServer, Model, type Registry } from 'miragejs';
+import { createServer, Model, Response, type Registry } from 'miragejs';
 import type { ModelDefinition } from 'miragejs/-types';
 import type Schema from 'miragejs/orm/schema';
 import type { Van } from './types';
@@ -58,7 +58,7 @@ export function makeServer({ environment = 'development' } = {}) {
           'Dreamfinder is the perfect van to travel in and experience. With a ceiling height of 2.1m, you can stand up in this van and there is great head room. The floor is a beautiful glass-reinforced plastic (GRP) which is easy to clean and very hard wearing. A large rear window and large side windows make it really light inside and keep it well ventilated.',
         imageUrl:
           'https://assets.scrimba.com/advanced-react/react-router/dreamfinder.png',
-        type: 'simple',
+        type: 'rugged',
         hostId: '456',
       });
       server.create('van', {
@@ -80,7 +80,7 @@ export function makeServer({ environment = 'development' } = {}) {
           "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
         imageUrl:
           'https://assets.scrimba.com/advanced-react/react-router/green-wonder.png',
-        type: 'rugged',
+        type: 'simple',
         hostId: '123',
       });
     },
@@ -90,6 +90,7 @@ export function makeServer({ environment = 'development' } = {}) {
       this.logging = true;
 
       this.get('/vans', (schema) => {
+        // return new Response(400, {}, { error: 'Error fetching data' });
         return schema.all('van').models;
       });
 
@@ -106,14 +107,6 @@ export function makeServer({ environment = 'development' } = {}) {
         const id = request.params.id;
         return schema.findBy('van', { id, hostId: '123' });
       });
-
-      // ✅ Allow non-API requests through
-      // this.passthrough('/__vite_ping');
-      // this.passthrough('/__manifest');
-      // this.passthrough('/src');
-      // this.passthrough('/build');
-      // this.passthrough(); // important fallback
-      // this.passthrough(() => true); // important fallback
     },
   });
 

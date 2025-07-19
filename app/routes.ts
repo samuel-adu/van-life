@@ -23,5 +23,6 @@ export default [
       route('reviews', './routes/host/Reviews.tsx'),
     ]),
     route('*', './routes/NotFound.tsx'),
+    route('login', './routes/Login.tsx'),
   ]),
 ] satisfies RouteConfig;

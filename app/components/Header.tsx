@@ -1,5 +1,7 @@
 import { Link, NavLink } from 'react-router';
 import logo from '../assets/images/van-life-logo.png';
+import { LuCircleUser } from 'react-icons/lu';
+
 import '../styles/components/header.css';
 
 export default function Header() {
@@ -40,6 +42,11 @@ export default function Header() {
             >
               Vans
             </NavLink>
+          </li>
+          <li className="nav__list-item">
+            <Link to="login" className="login-link">
+              <LuCircleUser />
+            </Link>
           </li>
         </ul>
       </nav>

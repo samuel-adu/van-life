@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
 :root {
+  --ff-primary: 'Inter', sans-serif;
+
   --white: #ffffff;
   --black: #000000;
 
@@ -15,6 +17,7 @@
   --gray-700: #252525;
   --gray-300: #4d4d4d;
   --gray-100: #aaaaaa;
+  --gray-50: #d1d5db;
 
   --clr-simple: #e17654;
   --clr-luxury: var(--gray-900);
@@ -62,8 +65,7 @@
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: var(--ff-primary);
 }
 
 img {

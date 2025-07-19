@@ -1,23 +1,35 @@
-import { useState, useEffect } from 'react';
-import '../../styles/routes/vans/vans.css';
+import { Link, useSearchParams, useRouteError } from 'react-router';
 import type { Van } from '~/types';
-import { Link, useSearchParams } from 'react-router';
+import type { Route } from './+types/Vans';
+import { getVans } from '../../api';
+import '../../styles/routes/vans/vans.css';
 
-export default function Vans() {
+export async function clientLoader() {
+  let vans = await getVans();
+  return { vans };
+}
+
+export function ErrorBoundary() {
+  const error: any = useRouteError();
+  return (
+    <div className="container">
+      <h1>Error: {error.message}</h1>
+      <pre>
+        {error.status} - {error.statusText}
+      </pre>
+    </div>
+  );
+}
+
+export default function Vans({ loaderData }: Route.ComponentProps) {
+  const { vans } = loaderData;
   const [searchParams, setSearchParams] = useSearchParams();
-  const [vans, setVans] = useState<Van[]>([]);
 
   const typeFilter = searchParams.get('type');
 
   const displayedVans = typeFilter
-    ? vans.filter((van) => van.type === typeFilter)
+    ? vans.filter((van: Van) => van.type === typeFilter)
     : vans;
-
-  useEffect(() => {
-    fetch('/api/vans')
-      .then((res) => res.json())
-      .then((data) => setVans(data));
-  }, []);
 
   function handleFilterChange(value: string | null) {
     setSearchParams((prevSearchParams) => {
@@ -74,7 +86,7 @@ export default function Vans() {
         </div>
 
         <div className="van-list">
-          {displayedVans.map((van) => (
+          {displayedVans.map((van: Van) => (
             <div key={van.id} className="van-card">
               <Link
                 to={van.id}
